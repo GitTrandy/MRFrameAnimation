@@ -10,6 +10,17 @@
 
 @implementation MRFrameAnimationManager
 
++ (instancetype)sharedManager
+{
+    static MRFrameAnimationManager *_instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[MRFrameAnimationManager alloc] init];
+    });
+    
+    return _instance;
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -19,10 +30,5 @@
     return self;
 }
 
-
-- (void)test
-{
-    
-}
 
 @end

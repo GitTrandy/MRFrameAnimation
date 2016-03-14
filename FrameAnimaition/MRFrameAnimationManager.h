@@ -14,4 +14,6 @@
  */
 @interface MRFrameAnimationManager : NSObject
 
++ (instancetype)sharedManager;
+
 @end
