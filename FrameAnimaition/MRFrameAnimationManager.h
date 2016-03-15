@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MRFrameAnimationObject.h"
 
 /**
  *  支持动画的属性有： frame,contentSize,alpha,scale,transform
@@ -15,5 +16,7 @@
 @interface MRFrameAnimationManager : NSObject
 
 + (instancetype)sharedManager;
+
+- (void)addAnimationObject:(MRFrameAnimationObject *)object;
 
 @end

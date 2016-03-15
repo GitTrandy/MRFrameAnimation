@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601D9E2B1C97B39D0093EB82 /* MRFrameAnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 601D9E2A1C97B39D0093EB82 /* MRFrameAnimationObject.m */; };
 		603140D61C96858500ADA7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 603140D51C96858500ADA7AB /* main.m */; };
 		603140D91C96858500ADA7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 603140D81C96858500ADA7AB /* AppDelegate.m */; };
 		603140DC1C96858500ADA7AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603140DB1C96858500ADA7AB /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		601D9E291C97B39D0093EB82 /* MRFrameAnimationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRFrameAnimationObject.h; sourceTree = "<group>"; };
+		601D9E2A1C97B39D0093EB82 /* MRFrameAnimationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRFrameAnimationObject.m; sourceTree = "<group>"; };
 		603140D11C96858500ADA7AB /* MRFrameAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRFrameAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603140D51C96858500ADA7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		603140D71C96858500ADA7AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				6031410B1C96885900ADA7AB /* Category */,
 				603141081C96883800ADA7AB /* MRFrameAnimationManager.h */,
 				603141091C96883800ADA7AB /* MRFrameAnimationManager.m */,
+				601D9E291C97B39D0093EB82 /* MRFrameAnimationObject.h */,
+				601D9E2A1C97B39D0093EB82 /* MRFrameAnimationObject.m */,
 			);
 			path = FrameAnimaition;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			files = (
 				6031410E1C96887500ADA7AB /* UIView+MRFrameAnimation.m in Sources */,
 				603140DC1C96858500ADA7AB /* ViewController.m in Sources */,
+				601D9E2B1C97B39D0093EB82 /* MRFrameAnimationObject.m in Sources */,
 				6031410A1C96883800ADA7AB /* MRFrameAnimationManager.m in Sources */,
 				603140D91C96858500ADA7AB /* AppDelegate.m in Sources */,
 				603140D61C96858500ADA7AB /* main.m in Sources */,

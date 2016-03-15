@@ -31,4 +31,10 @@
 }
 
 
+- (void)addAnimationObject:(MRFrameAnimationObject *)object
+{
+    
+}
+
+
 @end
