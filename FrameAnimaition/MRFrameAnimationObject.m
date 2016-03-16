@@ -22,7 +22,6 @@
 - (void)setView:(UIView *)view
 {
     _view = view;
-    
     _frameX = view.frame.origin.x;
     _frameY = view.frame.origin.y;
     _frameW = view.frame.size.width;
