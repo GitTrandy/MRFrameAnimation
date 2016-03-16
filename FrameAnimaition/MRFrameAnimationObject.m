@@ -28,5 +28,25 @@
     _frameH = view.frame.size.height;
 }
 
+#pragma mark - Private Method
+
+#pragma mark - Public Method
+
+- (BOOL)nextFrame
+{
+    [self setCurrentFrame:_currentFrame++];
+    return _currentFrame >= _frameCount;
+}
+
+#pragma mark - Event Method
+
+#pragma mark - Getter & Setter Method
+
+- (void)setCurrentFrame:(NSInteger)frame
+{
+    _currentFrame = frame >= _frameCount ? _frameCount : frame;
+}
+
+
 
 @end
