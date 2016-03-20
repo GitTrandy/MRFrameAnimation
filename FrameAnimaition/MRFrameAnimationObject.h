@@ -8,16 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MRFrameAnimationProperty.h"
 
 typedef void (^SetAnimationBlock)(void);
 typedef void (^CompletionAnimationBlock)(BOOL finished);
 
 @interface MRFrameAnimationObject : NSObject
 {
-    CGFloat     _frameX;
-    CGFloat     _frameY;
-    CGFloat     _frameW;
-    CGFloat     _frameH;
+    MRFrameAnimationProperty *_originProperty;
+    MRFrameAnimationProperty *_finalProperty;
 }
 
 @property (nonatomic, weak, setter=setView:) UIView  *view;

@@ -14,7 +14,8 @@
 {
     self = [super init];
     if (self) {
-        [self setView:view];
+        _view = view;
+        _originProperty = [[MRFrameAnimationProperty alloc] initWithView:view];
     }
     return self;
 }
@@ -22,10 +23,7 @@
 - (void)setView:(UIView *)view
 {
     _view = view;
-    _frameX = view.frame.origin.x;
-    _frameY = view.frame.origin.y;
-    _frameW = view.frame.size.width;
-    _frameH = view.frame.size.height;
+    _finalProperty = [[MRFrameAnimationProperty alloc] initWithView:view];
 }
 
 #pragma mark - Private Method

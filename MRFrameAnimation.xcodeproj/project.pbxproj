@@ -18,6 +18,7 @@
 		603140FA1C96858500ADA7AB /* MRFrameAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 603140F91C96858500ADA7AB /* MRFrameAnimationUITests.m */; };
 		6031410A1C96883800ADA7AB /* MRFrameAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603141091C96883800ADA7AB /* MRFrameAnimationManager.m */; };
 		6031410E1C96887500ADA7AB /* UIView+MRFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6031410D1C96887500ADA7AB /* UIView+MRFrameAnimation.m */; };
+		8486C1EF1C9E695300845D61 /* MRFrameAnimationProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486C1EE1C9E695300845D61 /* MRFrameAnimationProperty.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		603141091C96883800ADA7AB /* MRFrameAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRFrameAnimationManager.m; sourceTree = "<group>"; };
 		6031410C1C96887500ADA7AB /* UIView+MRFrameAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MRFrameAnimation.h"; sourceTree = "<group>"; };
 		6031410D1C96887500ADA7AB /* UIView+MRFrameAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MRFrameAnimation.m"; sourceTree = "<group>"; };
+		8486C1ED1C9E695300845D61 /* MRFrameAnimationProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRFrameAnimationProperty.h; sourceTree = "<group>"; };
+		8486C1EE1C9E695300845D61 /* MRFrameAnimationProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRFrameAnimationProperty.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				603141091C96883800ADA7AB /* MRFrameAnimationManager.m */,
 				601D9E291C97B39D0093EB82 /* MRFrameAnimationObject.h */,
 				601D9E2A1C97B39D0093EB82 /* MRFrameAnimationObject.m */,
+				8486C1ED1C9E695300845D61 /* MRFrameAnimationProperty.h */,
+				8486C1EE1C9E695300845D61 /* MRFrameAnimationProperty.m */,
 			);
 			path = FrameAnimaition;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				603140DC1C96858500ADA7AB /* ViewController.m in Sources */,
 				601D9E2B1C97B39D0093EB82 /* MRFrameAnimationObject.m in Sources */,
 				6031410A1C96883800ADA7AB /* MRFrameAnimationManager.m in Sources */,
+				8486C1EF1C9E695300845D61 /* MRFrameAnimationProperty.m in Sources */,
 				603140D91C96858500ADA7AB /* AppDelegate.m in Sources */,
 				603140D61C96858500ADA7AB /* main.m in Sources */,
 			);
