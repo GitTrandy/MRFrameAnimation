@@ -13,6 +13,12 @@
 typedef void (^SetAnimationBlock)(void);
 typedef void (^CompletionAnimationBlock)(BOOL finished);
 
+
+typedef NS_ENUM(NSInteger,MRFrameAnimationType)
+{
+    MRFrameAnimationLinear = 0,
+};
+
 @interface MRFrameAnimationObject : NSObject
 {
     MRFrameAnimationProperty *_originProperty;

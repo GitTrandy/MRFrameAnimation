@@ -27,6 +27,12 @@
 }
 
 #pragma mark - Private Method
+- (void)handlerProperty:(MRFrameAnimationProperty *)originProperty
+          finalProperty:(MRFrameAnimationProperty *)finalProperty
+                   type:(MRFrameAnimationType )type
+{
+    
+}
 
 #pragma mark - Public Method
 
@@ -42,7 +48,7 @@
 
 - (void)setCurrentFrame:(NSInteger)frame
 {
-    _currentFrame = frame >= _frameCount ? _frameCount : frame;
+    _currentFrame = (frame >= _frameCount ? _frameCount : frame);
 }
 
 
