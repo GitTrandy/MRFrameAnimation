@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		601D9E2B1C97B39D0093EB82 /* MRFrameAnimationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 601D9E2A1C97B39D0093EB82 /* MRFrameAnimationObject.m */; };
+		602684781CB4F61100C2F9FC /* MRPropertyArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 602684771CB4F61100C2F9FC /* MRPropertyArray.m */; };
+		6026847B1CB4F78300C2F9FC /* MRFrameCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6026847A1CB4F78300C2F9FC /* MRFrameCalculator.m */; };
 		603140D61C96858500ADA7AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 603140D51C96858500ADA7AB /* main.m */; };
 		603140D91C96858500ADA7AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 603140D81C96858500ADA7AB /* AppDelegate.m */; };
 		603140DC1C96858500ADA7AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603140DB1C96858500ADA7AB /* ViewController.m */; };
@@ -41,6 +43,10 @@
 /* Begin PBXFileReference section */
 		601D9E291C97B39D0093EB82 /* MRFrameAnimationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRFrameAnimationObject.h; sourceTree = "<group>"; };
 		601D9E2A1C97B39D0093EB82 /* MRFrameAnimationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRFrameAnimationObject.m; sourceTree = "<group>"; };
+		602684761CB4F61100C2F9FC /* MRPropertyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRPropertyArray.h; sourceTree = "<group>"; };
+		602684771CB4F61100C2F9FC /* MRPropertyArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRPropertyArray.m; sourceTree = "<group>"; };
+		602684791CB4F78300C2F9FC /* MRFrameCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRFrameCalculator.h; sourceTree = "<group>"; };
+		6026847A1CB4F78300C2F9FC /* MRFrameCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRFrameCalculator.m; sourceTree = "<group>"; };
 		603140D11C96858500ADA7AB /* MRFrameAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRFrameAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603140D51C96858500ADA7AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		603140D71C96858500ADA7AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +169,10 @@
 				601D9E2A1C97B39D0093EB82 /* MRFrameAnimationObject.m */,
 				8486C1ED1C9E695300845D61 /* MRFrameAnimationProperty.h */,
 				8486C1EE1C9E695300845D61 /* MRFrameAnimationProperty.m */,
+				602684761CB4F61100C2F9FC /* MRPropertyArray.h */,
+				602684771CB4F61100C2F9FC /* MRPropertyArray.m */,
+				602684791CB4F78300C2F9FC /* MRFrameCalculator.h */,
+				6026847A1CB4F78300C2F9FC /* MRFrameCalculator.m */,
 			);
 			path = FrameAnimaition;
 			sourceTree = "<group>";
@@ -316,6 +326,8 @@
 				8486C1EF1C9E695300845D61 /* MRFrameAnimationProperty.m in Sources */,
 				603140D91C96858500ADA7AB /* AppDelegate.m in Sources */,
 				603140D61C96858500ADA7AB /* main.m in Sources */,
+				6026847B1CB4F78300C2F9FC /* MRFrameCalculator.m in Sources */,
+				602684781CB4F61100C2F9FC /* MRPropertyArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
