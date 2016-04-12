@@ -14,7 +14,11 @@
 {
     self = [super init];
     if (self) {
-        
+        _x = view.frame.origin.x;
+        _y = view.frame.origin.y;
+        _width = view.frame.size.width;
+        _height = view.frame.size.height;
+        _transform = view.transform;
     }
     return self;
 }

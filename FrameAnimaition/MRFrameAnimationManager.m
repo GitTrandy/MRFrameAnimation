@@ -33,7 +33,7 @@
 
 - (void)addAnimationObject:(MRFrameAnimationObject *)object
 {
-    
+    [_animationArray addObject:object];
 }
 
 

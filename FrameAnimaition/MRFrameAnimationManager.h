@@ -15,6 +15,8 @@
  */
 @interface MRFrameAnimationManager : NSObject
 
+@property (nonatomic, strong, readonly) NSMutableArray *animationArray;
+
 + (instancetype)sharedManager;
 
 - (void)addAnimationObject:(MRFrameAnimationObject *)object;

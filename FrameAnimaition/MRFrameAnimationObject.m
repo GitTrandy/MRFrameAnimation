@@ -57,6 +57,7 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
 {
     _view = view;
     _finalProperty = [[MRFrameAnimationProperty alloc] initWithView:view];
+    [self handlerProperty:_originProperty finalProperty:_finalProperty frameCount:self.frameCount type:MRFrameAnimationLinear];
 }
 
 #pragma mark - Private Method
@@ -68,19 +69,19 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     MRPropertyArray *propertyArray = [[MRPropertyArray alloc] init];
     if (finalProperty.x != originProperty.x)
     {
-        propertyArray.xArray = [MRFrameCalculator calculatorOrigin:originProperty.x final:originProperty.x frameCount:frameCount type:type];
+        propertyArray.xArray = [MRFrameCalculator calculatorOrigin:originProperty.x final:finalProperty.x frameCount:frameCount type:type];
     }
     else if(finalProperty.y != originProperty.y)
     {
-        propertyArray.yArray = [MRFrameCalculator calculatorOrigin:originProperty.y final:originProperty.y frameCount:frameCount type:type];
+        propertyArray.yArray = [MRFrameCalculator calculatorOrigin:originProperty.y final:finalProperty.y frameCount:frameCount type:type];
     }
     else if(finalProperty.width != originProperty.width)
     {
-        propertyArray.widthArray = [MRFrameCalculator calculatorOrigin:originProperty.width final:originProperty.width frameCount:frameCount type:type];
+        propertyArray.widthArray = [MRFrameCalculator calculatorOrigin:originProperty.width final:finalProperty.width frameCount:frameCount type:type];
     }
     else if(finalProperty.y != originProperty.y)
     {
-        propertyArray.heightArray = [MRFrameCalculator calculatorOrigin:originProperty.height final:originProperty.height frameCount:frameCount type:type];
+        propertyArray.heightArray = [MRFrameCalculator calculatorOrigin:originProperty.height final:finalProperty.height frameCount:frameCount type:type];
     }
     self.propertyArray = propertyArray;
 }

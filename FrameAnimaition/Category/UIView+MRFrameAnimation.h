@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 
 #import "MRFrameAnimationManager.h"
+#import "MRFrameAnimationProperty.h"
 
 @interface UIView (MRFrameAnimation)
 
-- (void)animateWithFrameCount:(NSInteger)frameCount delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
+- (void)setMRFrameAnimationProperty:(MRFrameAnimationProperty *)property;
 
-- (void)animateWithFrameCount:(NSInteger)frameCount animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion; // delay = 0.0, options = 0
+- (MRFrameAnimationObject *)animateWithFrameCount:(NSInteger)frameCount delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 
-- (void)animateWithFrameCount:(NSInteger)frameCount animations:(void (^)(void))animations; // delay = 0.0, options = 0, completion = NULL
+- (MRFrameAnimationObject *)animateWithFrameCount:(NSInteger)frameCount animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion; // delay = 0.0, options = 0
+
+- (MRFrameAnimationObject *)animateWithFrameCount:(NSInteger)frameCount animations:(void (^)(void))animations; // delay = 0.0, options = 0, completion = NULL
 
 @end
