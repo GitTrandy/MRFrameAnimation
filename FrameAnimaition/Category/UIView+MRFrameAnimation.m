@@ -11,6 +11,13 @@
 
 @implementation UIView (MRFrameAnimation)
 
+
+- (void)setMRFrameAnimationProperty:(MRFrameAnimationProperty *)property
+{
+    self.frame = CGRectMake(property.x, property.y, property.width, property.height);
+    self.transform = property.transform;
+}
+
 - (MRFrameAnimationObject *)animateWithFrameCount:(NSInteger)frameCount
                         delay:(NSTimeInterval)delay
                       options:(UIViewAnimationOptions)options
@@ -22,6 +29,7 @@
     animationObject.setAnimationBlock = animations;
     animations();
     [animationObject setView:self];
+    [self setMRFrameAnimationProperty:animationObject.originProperty];
     animationObject.completionAnimationBlock = completion;
     [[MRFrameAnimationManager sharedManager] addAnimationObject:animationObject];
     

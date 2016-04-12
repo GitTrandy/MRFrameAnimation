@@ -10,9 +10,9 @@
 
 @interface MRPropertyArray : NSObject
 
-@property (nonatomic, assign) NSArray<NSNumber *> *xArray;
-@property (nonatomic, assign) NSArray<NSNumber *> *yArray;
-@property (nonatomic, assign) NSArray<NSNumber *> *widthArray;
-@property (nonatomic, assign) NSArray<NSNumber *> *heightArray;
+@property (nonatomic, copy) NSArray<NSNumber *> *xArray;
+@property (nonatomic, copy) NSArray<NSNumber *> *yArray;
+@property (nonatomic, copy) NSArray<NSNumber *> *widthArray;
+@property (nonatomic, copy) NSArray<NSNumber *> *heightArray;
 
 @end

@@ -30,6 +30,9 @@ typedef NS_ENUM(NSInteger,MRFrameAnimationType)
 @property (nonatomic, assign) NSInteger frameCount;
 @property (nonatomic, strong) MRPropertyArray *propertyArray;
 
+@property (nonatomic, strong, readonly) MRFrameAnimationProperty *originProperty;
+@property (nonatomic, strong, readonly) MRFrameAnimationProperty *finalProperty;
+
 @property (nonatomic, copy) SetAnimationBlock setAnimationBlock;
 @property (nonatomic, copy) CompletionAnimationBlock completionAnimationBlock;
 
