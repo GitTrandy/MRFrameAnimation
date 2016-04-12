@@ -14,5 +14,7 @@
 @property (nonatomic, copy) NSArray<NSNumber *> *yArray;
 @property (nonatomic, copy) NSArray<NSNumber *> *widthArray;
 @property (nonatomic, copy) NSArray<NSNumber *> *heightArray;
+@property (nonatomic, copy) NSArray<NSValue *> *transformArray;
+@property (nonatomic, copy) NSArray<NSValue *> *layerTransformArray;
 
 @end

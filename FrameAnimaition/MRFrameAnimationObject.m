@@ -60,6 +60,12 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     [self handlerProperty:_originProperty finalProperty:_finalProperty frameCount:self.frameCount type:MRFrameAnimationLinear];
 }
 
+
+- (void)dealloc
+{
+    NSLog(@"%@ dealloc",self);
+}
+
 #pragma mark - Private Method
 - (void)handlerProperty:(MRFrameAnimationProperty *)originProperty
           finalProperty:(MRFrameAnimationProperty *)finalProperty
@@ -83,6 +89,15 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     {
         propertyArray.heightArray = [MRFrameCalculator calculatorOrigin:originProperty.height final:finalProperty.height frameCount:frameCount type:type];
     }
+    if (!CGAffineTransformEqualToTransform(finalProperty.transform,originProperty.transform))
+    {
+        propertyArray.transformArray =  [MRFrameCalculator calculatorTransformOrigin:originProperty.transform final:finalProperty.transform frameCount:frameCount type:type];
+    }
+    if (!CATransform3DEqualToTransform(finalProperty.layerTransform,originProperty.layerTransform))
+    {
+        propertyArray.layerTransformArray =  [MRFrameCalculator calculatorTransformOrigin:originProperty.transform final:finalProperty.transform frameCount:frameCount type:type];
+    }
+    
     self.propertyArray = propertyArray;
 }
 
@@ -112,6 +127,7 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     NSLog(@"_currentFrame = %ld",_currentFrame);
     CGRect rect = self.view.frame;
     CGFloat x,y,width,height;
+    CGAffineTransform transform = self.view.transform;
     x = rect.origin.x;
     y = rect.origin.y;
     width = rect.size.width;
@@ -133,7 +149,12 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     {
         height = [self.propertyArray.heightArray[_currentFrame - 1] floatValue];
     }
+    if (self.propertyArray.transformArray && [self.propertyArray.transformArray count] >= _currentFrame)
+    {
+        transform = [self.propertyArray.transformArray[_currentFrame - 1] CGAffineTransformValue];
+    }
     _view.frame = CGRectMake(x, y, width, height);
+    _view.transform = transform;
     
 }
 

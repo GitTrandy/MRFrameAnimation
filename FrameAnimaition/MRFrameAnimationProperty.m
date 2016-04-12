@@ -19,8 +19,14 @@
         _width = view.frame.size.width;
         _height = view.frame.size.height;
         _transform = view.transform;
+        _layerTransform = view.layer.transform;
     }
     return self;
+}
+
+- (void)dealloc
+{
+    NSLog(@"%@ dealloc",self);
 }
 
 @end

@@ -16,6 +16,7 @@
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGAffineTransform transform;
+@property (nonatomic, assign) CATransform3D layerTransform;
 
 - (instancetype)initWithView:(UIView *)view;
 

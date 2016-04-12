@@ -31,7 +31,7 @@
     [animationObject setView:self];
     [self setMRFrameAnimationProperty:animationObject.originProperty];
     animationObject.completionAnimationBlock = completion;
-    [[MRFrameAnimationManager sharedManager] addAnimationObject:animationObject];
+//    [[MRFrameAnimationManager sharedManager] addAnimationObject:animationObject];
     
     return animationObject;
 }
