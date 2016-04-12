@@ -71,15 +71,15 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     {
         propertyArray.xArray = [MRFrameCalculator calculatorOrigin:originProperty.x final:finalProperty.x frameCount:frameCount type:type];
     }
-    else if(finalProperty.y != originProperty.y)
+    if(finalProperty.y != originProperty.y)
     {
         propertyArray.yArray = [MRFrameCalculator calculatorOrigin:originProperty.y final:finalProperty.y frameCount:frameCount type:type];
     }
-    else if(finalProperty.width != originProperty.width)
+    if(finalProperty.width != originProperty.width)
     {
         propertyArray.widthArray = [MRFrameCalculator calculatorOrigin:originProperty.width final:finalProperty.width frameCount:frameCount type:type];
     }
-    else if(finalProperty.y != originProperty.y)
+    if(finalProperty.y != originProperty.y)
     {
         propertyArray.heightArray = [MRFrameCalculator calculatorOrigin:originProperty.height final:finalProperty.height frameCount:frameCount type:type];
     }
@@ -111,23 +111,29 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     _currentFrame = (frame < 1 ? 1 : frame);
     NSLog(@"_currentFrame = %ld",_currentFrame);
     CGRect rect = self.view.frame;
+    CGFloat x,y,width,height;
+    x = rect.origin.x;
+    y = rect.origin.y;
+    width = rect.size.width;
+    height = rect.size.height;
     if (self.propertyArray.xArray && [self.propertyArray.xArray count] >= _currentFrame)
     {
-        rect = CGRectReplaceX(self.view.frame, [self.propertyArray.xArray[_currentFrame - 1] floatValue]);
+        x = [self.propertyArray.xArray[_currentFrame - 1] floatValue];
     }
-    else if(self.propertyArray.yArray && [self.propertyArray.yArray count] >= _currentFrame)
+    
+    if(self.propertyArray.yArray && [self.propertyArray.yArray count] >= _currentFrame)
     {
-        rect = CGRectReplaceY(self.view.frame, [self.propertyArray.yArray[_currentFrame - 1] floatValue]);
+        x = [self.propertyArray.yArray[_currentFrame - 1] floatValue];
     }
-    else if(self.propertyArray.widthArray && [self.propertyArray.widthArray count] >= _currentFrame)
+    if(self.propertyArray.widthArray && [self.propertyArray.widthArray count] >= _currentFrame)
     {
-        rect = CGRectReplaceW(self.view.frame, [self.propertyArray.widthArray[_currentFrame - 1] floatValue]);
+        width = [self.propertyArray.widthArray[_currentFrame - 1] floatValue];
     }
-    else if(self.propertyArray.heightArray && [self.propertyArray.heightArray count] >= _currentFrame)
+    if(self.propertyArray.heightArray && [self.propertyArray.heightArray count] >= _currentFrame)
     {
-        rect = CGRectReplaceH(self.view.frame, [self.propertyArray.heightArray[_currentFrame - 1] floatValue]);
+        height = [self.propertyArray.heightArray[_currentFrame - 1] floatValue];
     }
-    _view.frame = rect;
+    _view.frame = CGRectMake(x, y, width, height);
     
 }
 

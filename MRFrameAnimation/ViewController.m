@@ -38,7 +38,7 @@
     
     
     self.object = [self.yellowView animateWithFrameCount:100 animations:^{
-        self.yellowView.frame = CGRectMake(200, 100, 100, 100);
+        self.yellowView.frame = CGRectMake(200, 200, 200, 200);
     }];
     
 //    [self performSelector:@selector(playAnimtion) withObject:nil afterDelay:2.f];
