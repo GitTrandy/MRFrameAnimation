@@ -95,7 +95,7 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     }
     if (!CATransform3DEqualToTransform(finalProperty.layerTransform,originProperty.layerTransform))
     {
-        propertyArray.layerTransformArray =  [MRFrameCalculator calculatorTransformOrigin:originProperty.transform final:finalProperty.transform frameCount:frameCount type:type];
+        propertyArray.layerTransformArray =  [MRFrameCalculator calculatorLayerTransformOrigin:originProperty.layerTransform final:finalProperty.layerTransform frameCount:frameCount type:type];
     }
     
     self.propertyArray = propertyArray;
@@ -128,6 +128,7 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     CGRect rect = self.view.frame;
     CGFloat x,y,width,height;
     CGAffineTransform transform = self.view.transform;
+    CATransform3D layerTransform = self.view.layer.transform;
     x = rect.origin.x;
     y = rect.origin.y;
     width = rect.size.width;
@@ -153,8 +154,14 @@ CGRect CGRectReplaceH(CGRect rect, CGFloat h)
     {
         transform = [self.propertyArray.transformArray[_currentFrame - 1] CGAffineTransformValue];
     }
-    _view.frame = CGRectMake(x, y, width, height);
+    if (self.propertyArray.layerTransformArray && [self.propertyArray.layerTransformArray count] >= _currentFrame)
+    {
+        layerTransform = [self.propertyArray.layerTransformArray[_currentFrame - 1] CATransform3DValue];
+    }
+    
     _view.transform = transform;
+    _view.layer.transform = layerTransform;
+//    _view.frame = CGRectMake(x, y, width, height);
     
 }
 

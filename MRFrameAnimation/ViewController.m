@@ -37,15 +37,16 @@
     [self.view addSubview:self.yellowView];
     
     
-    [self.yellowView.layer setValue:[NSNumber numberWithFloat:-1] forKeyPath:@"transform.rotation.x"];
-    [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.y"];
-    [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.z"];
+//    [self.yellowView.layer setValue:[NSNumber numberWithFloat:-1] forKeyPath:@"transform.rotation.x"];
+//    [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.y"];
+//    [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.z"];
     
     self.object = [self.yellowView animateWithFrameCount:100 animations:^{
 //        self.yellowView.frame = CGRectMake(200, 200, 200, 200);
-        [self.yellowView.layer setValue:[NSNumber numberWithFloat:-1] forKeyPath:@"transform.rotation.x"];
-        [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.y"];
-        [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.z"];
+//        [self.yellowView.layer setValue:[NSNumber numberWithFloat:-1] forKeyPath:@"transform.rotation.x"];
+//        [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.y"];
+//        [self.yellowView.layer setValue:[NSNumber numberWithFloat:0.5] forKeyPath:@"transform.rotation.z"];
+        self.yellowView.transform = CGAffineTransformRotate(self.yellowView.transform, 10);
     }];
     
 //    [self performSelector:@selector(playAnimtion) withObject:nil afterDelay:2.f];

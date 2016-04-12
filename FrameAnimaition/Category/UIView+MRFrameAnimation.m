@@ -14,8 +14,10 @@
 
 - (void)setMRFrameAnimationProperty:(MRFrameAnimationProperty *)property
 {
-    self.frame = CGRectMake(property.x, property.y, property.width, property.height);
     self.transform = property.transform;
+    self.layer.transform = property.layerTransform;
+    self.frame = CGRectMake(property.x, property.y, property.width, property.height);
+
 }
 
 - (MRFrameAnimationObject *)animateWithFrameCount:(NSInteger)frameCount
